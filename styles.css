@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.weather-app {
+    background: linear-gradient(135deg, #f3f4f6, #e3e6e8); 
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid transparent;
+    transition: transform 0.3s, border 0.3s;
+    position: relative;
+}
+
+.weather-app:hover {
+    transform: translateY(-10px);
+    border: 2px solid #007bff;
+}
+
+h1 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.weather-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+input, button {
+    padding: 15px 20px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    background-color: #f4f4f4;
+    color: #333;
+    width: 80%;
+    text-align: center;
+}
+
+input:focus {
+    border-color: #007bff;
+    background-color: #e0f7fa;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff8a65;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#weatherResult p {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #333;
+}
+
+#cityName {
+    font-size: 30px;
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#description {
+    font-style: italic;
+    color: #666;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+#temperature, #humidity, #windSpeed {
+    font-weight: bold;
+    color: #333;
+    font-size: 24px;
+}
+
+#temperature::before {
+    content: "🌡️ ";
+}
+
+#humidity::before {
+    content: "💧 ";
+}
+
+#windSpeed::before {
+    content: "🌬️ ";
+}
+
+#weatherResult div {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #e0f7fa;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
